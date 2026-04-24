@@ -1,6 +1,11 @@
+import Hero from "@/components/Hero/hero";
+import Navbar from "@/components/Navbar/Navbar";
 
 export default function Home() {
   return (
-    <div>Home</div>
-  )
+    <div className="bg-primary-background">
+      <Navbar />
+      <Hero/>
+    </div>
+  );
 }

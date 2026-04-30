@@ -5,14 +5,14 @@ import { House, Tv, Clapperboard, Bell, LayoutGrid } from "lucide-react";
 
 const items = [
   { text: "Home", icon: House },
-  { text: "Categorías", icon: LayoutGrid },
+  { text: "Categories ", icon: LayoutGrid },
   { text: "Series", icon: Tv },
-  { text: "Películas", icon: Clapperboard },
+  { text: "Movies", icon: Clapperboard },
 ];
 
 export default function Navbar() {
   return (
-    <nav className="px-15 py-3 flex justify-between items-center ring">
+    <nav className="px-15 py-3 flex justify-between items-center">
       <div className="flex items-center justify-center gap-10">
         <img src="/favicon.svg" alt="WatchNova Logo" className="size-10" />
         <div className="flex gap-2.5">

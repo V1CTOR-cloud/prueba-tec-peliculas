@@ -8,13 +8,14 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-white hover:bg-primary/90 rounded-md font-medium focus:ring-2 focus:ring-offset-2",
-        secondary: "bg-gray-100 text-black hover:bg-gray-200 rounded-md font-medium focus:ring-2 focus:ring-offset-2",
-        outline: "border border-gray-300 hover:bg-gray-100 rounded-md font-medium focus:ring-2 focus:ring-offset-2",
-        ghost: "hover:bg-gray-100 rounded-md font-medium",
-        destructive: "bg-red-500 text-white hover:bg-red-600 rounded-md font-medium focus:ring-2 focus:ring-offset-2",
+        default: "bg-primary text-white hover:bg-primary/90 rounded-md font-medium",
+        secondary: "bg-gray-100 text-black hover:bg-gray-200 rounded-md font-medium",
+        outline: "border border-gray-300 hover:bg-gray-100 rounded-md font-medium",
+        ghost: "!bg-transparent",
+        destructive: "bg-red-500 text-white hover:bg-red-600 rounded-md font-medium",
         navbar: "gap-1.5 rounded-lg cursor-pointer text-muted hover:bg-black/60",
         "navbar-active": "gap-1.5 rounded-lg cursor-pointer bg-purple-400",
+        glass: "bg-black/60 backdrop-blur-md border border-white/10 shadow-lg "
       },
       size: {
         default: "h-10 px-4 py-2 text-sm",

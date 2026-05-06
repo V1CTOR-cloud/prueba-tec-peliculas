@@ -3,6 +3,10 @@ import Button from "@/components/Button/Button";
 import { Ellipsis, Play } from "lucide-react";
 import { useState } from "react";
 
+interface Props {
+  className?: string;
+}
+
 const items = [
   {
     id: 1,
@@ -36,11 +40,11 @@ const items = [
   },
 ];
 
-export default function Carousel() {
+export default function Carousel({ className }: Props) {
   const [current, setCurrent] = useState(0);
 
   return (
-    <div className="relative col-span-12 md:col-span-8 row-span-3 rounded-2xl overflow-hidden">
+    <div className={`${className} relative rounded-2xl overflow-hidden`}>
       <div
         className="flex h-full transition-transform duration-500 ease-out"
         style={{ transform: `translateX(-${current * 100}%)` }}

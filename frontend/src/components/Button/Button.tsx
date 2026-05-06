@@ -10,16 +10,16 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary text-white hover:bg-primary/90 rounded-md font-medium",
         secondary: "bg-gray-100 text-black hover:bg-gray-200 rounded-md font-medium",
-        outline: "border border-gray-300 hover:bg-gray-100 rounded-md font-medium",
+        outline: "border border-neutral-500 hover:bg-neutral-900 rounded-md font-medium",
         ghost: "!bg-transparent",
         destructive: "bg-red-500 text-white hover:bg-red-600 rounded-md font-medium",
         navbar: "gap-1.5 rounded-lg cursor-pointer text-muted hover:bg-black/60",
         "navbar-active": "gap-1.5 rounded-lg cursor-pointer bg-purple-400",
-        glass: "bg-black/60 backdrop-blur-md border border-white/10 shadow-lg "
+        glass: "bg-black/60 backdrop-blur-md border border-white/10 shadow-lg"
       },
       size: {
         default: "h-10 px-4 py-2 text-sm",
-        sm: "h-8 px-3 text-xs",
+        sm: "h-8 p-2.5 py-4.5 text-xs",
         lg: "h-12 px-6 text-base",
         icon: "h-10 w-10",
         navbar: "p-3.5 text-sm",

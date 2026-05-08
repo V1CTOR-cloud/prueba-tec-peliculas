@@ -2,7 +2,7 @@ import { clsx } from "clsx";
 import { type LucideIcon } from "lucide-react";
 
 interface Props {
-  label: string;
+  label?: string;
   icon?: LucideIcon;
   active?: boolean;
   onClick?: () => void;

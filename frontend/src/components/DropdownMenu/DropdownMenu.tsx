@@ -6,7 +6,7 @@ type MenuSeparator = { type: "separator" };
 
 type MenuAction = {
   type?: "item";
-  label: string;
+  label?: string;
   icon?: LucideIcon;
   destructive?: boolean;
   disabled?: boolean;
@@ -18,9 +18,14 @@ type MenuItem = MenuAction | MenuSeparator;
 interface DropdownMenuProps {
   trigger: React.ReactNode;
   items: MenuItem[];
+  className?: String;
 }
 
-export default function DropdownMenu({ trigger, items }: DropdownMenuProps) {
+export default function DropdownMenu({
+  trigger,
+  items,
+  className,
+}: DropdownMenuProps) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -43,13 +48,12 @@ export default function DropdownMenu({ trigger, items }: DropdownMenuProps) {
 
   return (
     <div ref={ref} className="relative inline-block">
-      
       <div onClick={() => setOpen((v) => !v)} className="cursor-pointer">
         {trigger}
       </div>
 
       {open && (
-        <div className="absolute z-50 mt-2.5 right-0 min-w-40 rounded-lg border border-white/10 bg-neutral-900/95 backdrop-blur-md p-1 shadow-2xl shadow-black/50">
+        <div className={`${className} absolute z-50 mt-2.5 right-0 min-w-40 rounded-lg border border-white/10 bg-neutral-900/95 backdrop-blur-md p-1 shadow-2xl shadow-black/50`}>
           {items.map((item, i) => {
             if (item.type === "separator") {
               return <div key={i} className="my-1 h-px bg-white/10 mx-1" />;

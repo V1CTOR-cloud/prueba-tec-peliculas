@@ -1,38 +1,52 @@
+import { getInitials } from "@/utils/utils";
 import clsx from "clsx";
 
 interface Props {
-  fallbackName?: string;
+  name: string;
   image?: string;
-  size?: number;
-  isCircle?: boolean;
+  alt?: string;
+  iconSize?: number;
+  className?: string;
+  fullInfo?: {
+    name: string;
+    role: string;
+  };
 }
 
-function getInitials(name?: string): string {
-  if (!name) return "";
-  const words = name.trim().split(/\s+/);
-  if (words.length === 1) return words[0].substring(0, 2).toUpperCase();
-  return (words[0][0] + words[1][0]).toUpperCase();
-}
-
-export default function Avatar({ fallbackName, image, size = 40, isCircle }: Props) {
+export default function Avatar({
+  name,
+  image,
+  alt = name,
+  iconSize = 40,
+  fullInfo,
+}: Props) {
   return (
     <div
-      style={{ width: size, height: size }}
       className={clsx(
-        "flex items-center justify-center cursor-pointer transition-colors overflow-hidden shrink-0",
-        !image && "bg-black/60 text-muted",
-        isCircle ? "rounded-full" : "rounded-lg"
+        "flex items-center cursor-pointer overflow-hidden shrink-0 gap-3 hover:scale-95 transition-transform",
       )}
     >
-      {image ? (
-        <img
-          src={image}
-          alt={fallbackName ?? "avatar"}
-          className="w-full h-full object-cover"
-        />
-      ) : (
-        <span className="text-sm font-medium">{getInitials(fallbackName)}</span>
-      )}
+      <div style={{ width: iconSize, height: iconSize }}>
+        {image ? (
+          <img
+            src={image}
+            alt={alt ?? "avatar"}
+            className="size-full object-cover rounded-lg"
+          />
+        ) : (
+          <div className="w-10 h-10 rounded-full bg-neutral-700 border border-white/10 flex items-center justify-center text-sm font-medium text-neutral-300 shrink-0">
+            {getInitials(name)}
+          </div>
+        )}
+      </div>
+      <div className="flex flex-col min-w-0">
+        <span className="text-sm text-neutral-300 font-medium truncate">
+          {fullInfo?.name}
+        </span>
+        <span className="text-xs text-neutral-400 truncate">
+          {fullInfo?.role}
+        </span>
+      </div>
     </div>
   );
 }

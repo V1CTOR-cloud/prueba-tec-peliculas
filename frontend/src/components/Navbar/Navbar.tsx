@@ -55,8 +55,12 @@ export default function Navbar() {
         <DropdownMenu
           trigger={
             <Avatar
-              fallbackName="Víctor Martínez"
+              name="Víctor Martínez"
               image="https://images.pexels.com/photos/36808916/pexels-photo-36808916.png"
+              fullInfo={{
+                name: "Víctor Martínez",
+                role: "SysAdmin"
+              }}
             />
           }
           items={userActions}

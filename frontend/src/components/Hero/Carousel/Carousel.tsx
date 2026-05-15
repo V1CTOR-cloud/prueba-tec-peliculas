@@ -40,7 +40,7 @@ const items = [
   },
 ];
 
-export default function Carousel({ className }: Props) {
+export default function HeroCarousel({ className }: Props) {
   const [current, setCurrent] = useState(0);
 
   return (

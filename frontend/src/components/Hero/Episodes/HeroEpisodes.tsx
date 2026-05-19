@@ -1,9 +1,13 @@
 import { Ellipsis } from "lucide-react";
 import Button from "@/components/Button/Button";
 
-export default function HeroEpisodes() {
+interface Props {
+  className?: string;
+}
+
+export default function HeroEpisodes({ className }: Props) {
   return (
-    <div className="col-span-12 md:col-span-4 row-span-5 flex flex-col gap-4 rounded-2xl overflow-auto no-scrollbar">
+    <div className={`${className} flex flex-col gap-4 rounded-2xl overflow-auto no-scrollbar`}>
       <div className="relative z-10 py-2 px-4 flex justify-between items-center bg-black/30 backdrop-blur-md border-b border-white/10 rounded-t-2xl">
         <h2 className="text-white font-semibold">Episodes</h2>
         <Button aria-label="Options" variant={"ghost"} className="p-0 size-fit">

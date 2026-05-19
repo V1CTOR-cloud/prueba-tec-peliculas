@@ -1,7 +1,11 @@
 import Avatar from "@/components/Avatar/Avatar";
 import Button from "@/components/Button/Button";
 
-export default function HeroCast() {
+interface Props {
+  className?: string;
+}
+
+export default function HeroCast({ className }: Props) {
   const cast = [
     { name: "Rami Malek", role: "Elliot Alderson", initials: "RM" },
     { name: "Christian Slater", role: "Mr. Robot", initials: "CS" },
@@ -22,7 +26,7 @@ export default function HeroCast() {
   ];
 
   return (
-    <div className="col-span-12 md:col-span-4 row-span-2 flex flex-col bg-neutral-800 rounded-2xl text-white">
+    <div className={`${className} flex flex-col bg-neutral-800 rounded-2xl text-white`}>
       <div className="relative z-10 py-2 px-4 flex justify-between items-center bg-black/60 backdrop-blur-md border border-white/10 rounded-t-2xl">
         <h2 className="font-semibold">Cast</h2>
         <Button

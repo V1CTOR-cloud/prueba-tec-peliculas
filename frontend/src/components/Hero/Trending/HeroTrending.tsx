@@ -3,7 +3,11 @@
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function HeroTrending() {
+interface Props {
+  className?: string;
+}
+
+export default function HeroTrending({ className }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const trending = [
@@ -22,62 +26,52 @@ export default function HeroTrending() {
     {
       title: "Invincible",
       year: 2019,
-      image:
-        "https://4kwallpapers.com/images/walls/thumbs_3t/26273.jpg",
+      image: "https://4kwallpapers.com/images/walls/thumbs_3t/26273.jpg",
     },
     {
       title: "One Piece",
       year: 2023,
-      image:
-        "https://4kwallpapers.com/images/walls/thumbs_3t/25732.jpg",
+      image: "https://4kwallpapers.com/images/walls/thumbs_3t/25732.jpg",
     },
     {
       title: "Avatar Fire and Ash",
       year: 2025,
-      image:
-        "https://4kwallpapers.com/images/walls/thumbs_3t/24826.jpg",
+      image: "https://4kwallpapers.com/images/walls/thumbs_3t/24826.jpg",
     },
     {
       title: "Minecraft the movie",
       year: 2026,
-      image:
-        "https://4kwallpapers.com/images/walls/thumbs/24237.jpg",
+      image: "https://4kwallpapers.com/images/walls/thumbs/24237.jpg",
     },
     {
       title: "Wednesday",
       year: 2021,
-      image:
-        "https://4kwallpapers.com/images/walls/thumbs/24008.jpg",
+      image: "https://4kwallpapers.com/images/walls/thumbs/24008.jpg",
     },
     {
       title: "Lilo's & Stich",
       year: 2012,
-      image:
-        "https://4kwallpapers.com/images/walls/thumbs/23837.jpg",
+      image: "https://4kwallpapers.com/images/walls/thumbs/23837.jpg",
     },
     {
       title: "Infinity Castle",
       year: 2012,
-      image:
-        "https://4kwallpapers.com/images/walls/thumbs/23650.jpg",
+      image: "https://4kwallpapers.com/images/walls/thumbs/23650.jpg",
     },
     {
       title: "Scream",
       year: 2010,
-      image:
-        "https://4kwallpapers.com/images/walls/thumbs/23043.png",
+      image: "https://4kwallpapers.com/images/walls/thumbs/23043.png",
     },
     {
       title: "I Know What You Did Last Summer",
       year: 2025,
-      image:
-        "https://4kwallpapers.com/images/walls/thumbs/22846.png",
+      image: "https://4kwallpapers.com/images/walls/thumbs/22846.png",
     },
     {
       title: "Love Death & Robots",
       year: 2022,
-      image:
-        "https://4kwallpapers.com/images/walls/thumbs/22564.png",
+      image: "https://4kwallpapers.com/images/walls/thumbs/22564.png",
     },
   ];
 
@@ -89,26 +83,25 @@ export default function HeroTrending() {
   };
 
   return (
-    <div className="col-span-6 md:col-span-8 row-span-2 min-h-0 flex flex-col rounded-2xl bg-neutral-800 text-white">
-      <div className="relative z-10 py-2 px-4 flex justify-between items-center bg-black/60 backdrop-blur-md border border-white/10 rounded-t-2xl shrink-0">
-        <h2 className="font-semibold">Trending</h2>
+    <div className={`${className} min-h-0 flex flex-col rounded-2xl  text-white`}>
+      <div className="relative z-10 py-2 px-4 flex justify-between items-center  rounded-t-2xl shrink-0">
+        <h2 className="font-semibold text-xl">Trending</h2>
       </div>
 
       <div className="relative flex-1 min-h-0">
-
         {/* Controls */}
         {trending.length > 5 && (
           <>
             <button
               onClick={() => scroll("left")}
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-10 p-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-white hover:bg-black/80 transition-colors"
+              className="absolute left-2 top-1/2 -translate-y-1/2 cursor-pointer z-10 p-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-white hover:bg-black/80 transition-colors"
             >
               <ChevronLeft size={18} />
             </button>
 
             <button
               onClick={() => scroll("right")}
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-10 p-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-white hover:bg-black/80 transition-colors"
+              className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer z-10 p-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-white hover:bg-black/80 transition-colors"
             >
               <ChevronRight size={18} />
             </button>

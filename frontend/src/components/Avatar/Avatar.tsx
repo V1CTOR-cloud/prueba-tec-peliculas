@@ -6,6 +6,7 @@ interface Props {
   image?: string;
   alt?: string;
   iconSize?: number;
+  isCircle?: boolean;
   className?: string;
   fullInfo?: {
     name: string;
@@ -19,6 +20,7 @@ export default function Avatar({
   alt = name,
   iconSize = 40,
   fullInfo,
+  isCircle
 }: Props) {
   return (
     <div
@@ -31,7 +33,7 @@ export default function Avatar({
           <img
             src={image}
             alt={alt ?? "avatar"}
-            className="size-full object-cover rounded-lg"
+            className={`size-full object-cover ${isCircle ? "rounded-full" : "rounded-lg"}`}
           />
         ) : (
           <div className="w-10 h-10 rounded-full bg-neutral-700 border border-white/10 flex items-center justify-center text-sm font-medium text-neutral-300 shrink-0">

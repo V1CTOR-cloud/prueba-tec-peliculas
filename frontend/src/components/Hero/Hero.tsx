@@ -12,7 +12,7 @@ export default function Hero() {
 
         <HeroDetails className="col-span-12 md:col-span-4 row-span-3" />
 
-        <HeroEpisodes className="col-span-6 md:col-span-8 row-span-2" />
+        <HeroEpisodes className="col-span-12 md:col-span-8 row-span-2" />
 
         <HeroCast className="col-span-12 md:col-span-4 row-span-2 " />
 

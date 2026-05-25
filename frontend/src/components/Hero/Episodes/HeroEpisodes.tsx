@@ -1,30 +1,73 @@
-import { Ellipsis } from "lucide-react";
-import Button from "@/components/Button/Button";
+"use-client";
+
+import { useRef } from "react";
+import EpisodeThumb from "./EpisodeThumb/EpisodeThumb";
+import { ChevronLeft, ChevronRight, ChevronsUpDown } from "lucide-react";
+import { mediaList } from "@/data/data";
 
 interface Props {
   className?: string;
 }
 
 export default function HeroEpisodes({ className }: Props) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (dir: "left" | "right") => {
+    scrollRef.current?.scrollBy({
+      left: dir === "right" ? 400 : -400,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <div className={`${className} flex flex-col gap-4 rounded-2xl overflow-auto no-scrollbar`}>
-      <div className="relative z-10 py-2 px-4 flex justify-between items-center bg-black/30 backdrop-blur-md border-b border-white/10 rounded-t-2xl">
-        <h2 className="text-white font-semibold">Episodes</h2>
-        <Button aria-label="Options" variant={"ghost"} className="p-0 size-fit">
-          <Ellipsis className="text-white" />
-        </Button>
+    <div
+      className={`${className} min-h-0 flex flex-col rounded-2xl  text-white`}
+    >
+      <div className="relative z-10 py-2 px-4 flex justify-between items-center  rounded-t-2xl shrink-0">
+        <div className="flex gap-2 items-center">
+          <h2 className="font-semibold text-xl">Episodes</h2>
+          <div className="flex gap-1 items-center cursor-pointer">
+            <span>
+              - Season {mediaList[0].season[0].number}
+            </span>
+            <ChevronsUpDown size={20} />
+          </div>
+        </div>
       </div>
 
-      <div className="flex gap-4 cursor-pointer hover:scale-95 transition-transform">
+      <div className="relative flex-1 min-h-0">
+        {/* Controls */}
+        {mediaList[0].season[0]!.episodes!.length > 4 && (
+          <>
+            <button
+              onClick={() => scroll("left")}
+              className="absolute left-2 top-1/2 -translate-y-1/2 cursor-pointer z-10 p-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-white hover:bg-black/80 transition-colors"
+            >
+              <ChevronLeft size={18} />
+            </button>
+
+            <button
+              onClick={() => scroll("right")}
+              className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer z-10 p-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-white hover:bg-black/80 transition-colors"
+            >
+              <ChevronRight size={18} />
+            </button>
+          </>
+        )}
+
         <div
-          className={`bg-[url('https://imgs.search.brave.com/MGESi0htvrt0GH4WqNzNPxLzoDR0a4o6VxcesA11JgA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93MC5w/ZWFrcHguY29tL3dh/bGxwYXBlci83OTMv/MjIwL0hELXdhbGxw/YXBlci1mc29jaWV0/eS1tci1yb2JvdC1t/ci1yb2JvdC10di1z/aG93cy1oYWNrZXIt/dGh1bWJuYWlsLmpw/Zw')] h-36 w-64 rounded-2xl bg-center bg-cover shrink-0`}
-        />
-        <div className="flex flex-col gap-2 pt-4">
-          <h1 className="text-xl text-white">Hola, Elliot</h1>
-          <p className="text-neutral-300 text-sm">
-            Elliot llega a Coney Island y la ilusión comienza a fallar. Mr.
-            Robot destapa la verdad.
-          </p>
+          ref={scrollRef}
+          className="flex flex-row justify-between gap-3 p-4 overflow-x-auto no-scrollbar h-full"
+        >
+          {mediaList[0].season[0]!.episodes!.map((item) => (
+            <EpisodeThumb
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              description={item.description}
+              thumbnail={item.thumbnail}
+            />
+          ))}
         </div>
       </div>
     </div>

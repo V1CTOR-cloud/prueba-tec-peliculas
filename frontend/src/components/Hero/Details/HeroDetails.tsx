@@ -10,14 +10,15 @@ export default function HeroDetails({ className }: Props) {
     <div className={`${className} flex flex-col bg-neutral-800 gap-4 rounded-2xl overflow-auto no-scrollbar text-white`}>
       <div className="relative z-10 py-2 px-4 flex justify-between items-center bg-black/60 backdrop-blur-md border border-white/10 rounded-t-2xl">
         <h2 className="font-semibold">Details</h2>
+        <small className="md:hidden">+16</small>
       </div>
 
       <div className="h-full flex flex-col justify-between px-4 py-3 pb-6">
         <div className="flex flex-col gap-4">
           <div className="flex items-center justify-between">
             <div className="flex gap-3.5">
-              <h1 className="text-5xl font-semibold">Mr Robot</h1>
-              <div className="w-fit grid place-content-center rounded-full p-3 bg-black/60 backdrop-blur-md border border-white/10">
+              <h1 className="text-4xl md:text-5xl font-semibold">Mr Robot</h1>
+              <div className="hidden size-fit md:grid place-content-center rounded-full p-3 bg-black/60 backdrop-blur-md border border-white/10">
                 +16
               </div>
             </div>
@@ -40,11 +41,11 @@ export default function HeroDetails({ className }: Props) {
           </p>
         </div>
 
-        <div className="flex gap-4">
-          <Button icon={Play} size={"lg"} variant={"secondary"}>
+        <div className="flex flex-col md:flex-row gap-4">
+          <Button icon={Play} size={"lg"} variant={"secondary"} className="w-full md:">
             <h1>Watch Now</h1>
           </Button>
-          <Button icon={Bookmark} size={"lg"} variant={"default"}>
+          <Button icon={Bookmark} size={"lg"} variant={"default"} className="w-full">
             <h1>Add to Watchlist</h1>
           </Button>
         </div>

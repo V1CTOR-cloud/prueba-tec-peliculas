@@ -15,27 +15,38 @@ export type Genre =
 // ─── Person ──────────────────────────────────────────────────────────────────
 
 export interface CastMember {
+  id: string;
   name: string;
   role: string;
   image?: string;
 }
 
+// ─── Season ─────────────────────────────────────────────────────────────────
+
+export interface Season {
+  id: string,
+  number: number;
+  duration: number;
+  episodes: Episode[];
+}
+
 // ─── Episode ─────────────────────────────────────────────────────────────────
 
 export interface Episode {
-  id: number;
+  id: string;
   title: string;
   description: string;
   thumbnail: string;
-  duration: number;
-  season: number;
-  episode: number;
+  duration?: number;
+  season?: number;
+  episode?: number;
+  onClick?: React.MouseEventHandler
 }
 
 // ─── Media ───────────────────────────────────────────────────────────────────
 
 export interface Media {
-  id: number;
+  id: string;
   type: MediaType;
 
   title: string;
@@ -52,5 +63,15 @@ export interface Media {
 
   // Relations
   cast: CastMember[];
-  episodes?: Episode[];
+  season?: Season[];
+}
+
+// ─── User Media ──────────────────────────────────────────────────────────────
+
+export interface WatchingMedia {
+  media: Media;
+  progress: number;       
+  currentEpisode?: string;
+  currentSeason?: string;
+  lastWatched: Date;
 }

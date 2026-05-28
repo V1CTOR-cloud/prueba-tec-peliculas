@@ -1,4 +1,3 @@
-// context/MediaContext.tsx
 "use client";
 import { createContext, useState, type ReactNode } from "react";
 import type { Media, WatchingMedia } from "@/types";
@@ -10,6 +9,8 @@ import {
 interface MediaContextType {
   mediaList: Media[];
   watchingList: WatchingMedia[];
+  activeMedia: Media;
+  setActiveMedia: (media: Media) => void;
   addToWatching: (media: Media) => void;
   removeFromWatching: (mediaId: string) => void;
   updateProgress: (
@@ -25,17 +26,16 @@ export function MediaProvider({ children }: { children: ReactNode }) {
   const [mediaList] = useState<Media[]>(initialMedia);
   const [watchingList, setWatchingList] =
     useState<WatchingMedia[]>(initialWatching);
+  const [activeMedia, setActiveMedia] = useState<Media>(
+    initialWatching[0]?.media ?? initialMedia[0],
+  );
 
   const addToWatching = (media: Media) => {
     const already = watchingList.some((w) => w.media.id === media.id);
     if (already) return;
     setWatchingList((prev) => [
       ...prev,
-      {
-        media,
-        progress: 0,
-        lastWatched: new Date(),
-      },
+      { media, progress: 0, lastWatched: new Date() },
     ]);
   };
 
@@ -67,6 +67,8 @@ export function MediaProvider({ children }: { children: ReactNode }) {
       value={{
         mediaList,
         watchingList,
+        activeMedia,
+        setActiveMedia,
         addToWatching,
         removeFromWatching,
         updateProgress,

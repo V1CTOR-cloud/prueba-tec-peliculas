@@ -1,15 +1,27 @@
 import Button from "@/components/Button/Button";
 import type { Episode } from "@/types";
-import { Play } from "lucide-react";
+import { Play, Clapperboard } from "lucide-react";
+import { useState } from "react";
 
 export default function EpisodeThumb({ title, description, thumbnail, onClick }: Episode) {
+  const [imgError, setImgError] = useState(false);
+
   return (
     <div onClick={onClick} className="relative group rounded-xl overflow-hidden cursor-pointer shrink-0 w-72 md:w-92 h-full">
-      <img
-        src={thumbnail}
-        alt={title}
-        className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
-      />
+      {imgError || !thumbnail ? (
+        <div className="size-full bg-neutral-700 flex flex-col items-center justify-center gap-2 text-neutral-500 transition-transform duration-300 group-hover:scale-105">
+          <Clapperboard size={32} />
+          <span className="text-xs">{title}</span>
+        </div>
+      ) : (
+        <img
+          src={thumbnail}
+          alt={title}
+          onError={() => setImgError(true)}
+          className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+      )}
+
       <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3">
         <Button
           variant={"glass"}

@@ -7,7 +7,7 @@ export default function EpisodeThumb({ title, description, thumbnail, onClick }:
   const [imgError, setImgError] = useState(false);
 
   return (
-    <div onClick={onClick} className="relative group rounded-xl overflow-hidden cursor-pointer shrink-0 w-72 md:w-92 h-full">
+    <div onClick={onClick} className="relative group rounded-xl overflow-hidden cursor-pointer shrink-0 w-72 lg:w-92 h-full">
       {imgError || !thumbnail ? (
         <div className="size-full bg-neutral-700 flex flex-col items-center justify-center gap-2 text-neutral-500 transition-transform duration-300 group-hover:scale-105">
           <Clapperboard size={32} />

@@ -520,8 +520,8 @@ export const mediaList: Media[] = [
     ageRating: "+13",
     genres: ["Sci-Fi", "Horror", "Drama"],
     rating: 4.7,
-    posterUrl: "https://4kwallpapers.com/images/walls/thumbs_3t/25000.png",
-    bannerUrl: "https://4kwallpapers.com/images/walls/thumbs_3t/25000.png",
+    posterUrl: "https://imgs.search.brave.com/A8DN8IMgc8hgSdO_lchGCir0L6PmpU38mgjmokqEc0s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2MwLzQ3/LzVhL2MwNDc1YTc1/ODYyNmJmMjg0OGVi/ZGQwMDI5OGUzNWNj/LmpwZw",
+    bannerUrl: "https://imgs.search.brave.com/l_5s8DDCmJLUPlvNgzgvQafnDU6MQNqU0aAg1MqhW2Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kbm0u/bmZseGltZy5uZXQv/YXBpL3Y2LzJEdVFs/eDBmTTR3ZDFuenFt/NUJGQmk2SUxhOC9B/QUFBUVFCZjhJTHph/cUdHbW10REpWNzFV/WFp2UmtIV3RNbUJt/d0kzclFaMzlTdFk1/ZkNGMzcwTHlfU0Vv/b0ZTNThyREtHZ0Y2/ckVBWXpEWXhvTlVX/MXRyVm1NUlFkcVBy/NzZUWlN3Y3dzcGt0/TEZtQjZISWNlMldI/a3JmbU4tNXlNYWdK/UC1SMHRaVmNFWWNf/RmVtRGEzNTRkQ1N2/Q2suanBnP3I9Yjk5",
     cast: [
       {
         id: "st001",
@@ -606,8 +606,8 @@ export const mediaList: Media[] = [
     ageRating: "+13",
     genres: ["Sci-Fi", "Action", "Thriller"],
     rating: 4.9,
-    posterUrl: "https://4kwallpapers.com/images/walls/thumbs_3t/24826.jpg",
-    bannerUrl: "https://4kwallpapers.com/images/walls/thumbs_3t/24826.jpg",
+    posterUrl: "https://imgs.search.brave.com/qCl5UdzE5mJS9kukA5j-_frGB6vK5_wBLMrBIbTBmIQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXQuY29t/L3cvZnVsbC85LzYv/MS8zMDQ4NjctMTUz/NngyNzMyLWlwaG9u/ZS1oZC1pbmNlcHRp/b24tYmFja2dyb3Vu/ZC1pbWFnZS5qcGc",
+    bannerUrl: "https://imgs.search.brave.com/QME7BaDyWc_BgW0i7DK8tsFOOyFS2vm73I3ZxI8lQvg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC9uRWFjWmFS/LmpwZw",
     cast: [
       {
         id: "inc001",
@@ -650,8 +650,8 @@ export const mediaList: Media[] = [
     ageRating: "+18",
     genres: ["Drama", "Thriller"],
     rating: 4.9,
-    posterUrl: "https://4kwallpapers.com/images/walls/thumbs_3t/25732.jpg",
-    bannerUrl: "https://4kwallpapers.com/images/walls/thumbs_3t/25732.jpg",
+    posterUrl: "https://imgs.search.brave.com/emmBAP5X5_KOS4LOv77do1HnIZbCa2zG18qS8cw5ru8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODE1N3VnNytLK0wu/anBn",
+    bannerUrl: "https://imgs.search.brave.com/NftRARDlsFacm4IiSleszZP_Mz8Fo0cbgi_EcQWf_rM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXQuY29t/L3cvZnVsbC8yLzMv/Zi85NjQyMzYtMzg0/MHgyMTYwLWRlc2t0/b3AtNGstdGhlLXdp/cmUtdHYtc2VyaWVz/LWJhY2tncm91bmQu/anBn",
     cast: [
       {
         id: "tw001",
@@ -718,7 +718,7 @@ export const mediaList: Media[] = [
     ageRating: "+13",
     genres: ["Action", "Drama", "Thriller"],
     rating: 4.95,
-    posterUrl: "https://4kwallpapers.com/images/walls/thumbs/24237.jpg",
+    posterUrl: "https://preview.redd.it/give-me-some-of-the-best-movies-wallpapers-for-my-pc-v0-luymik2un9pf1.jpeg?width=736&format=pjpg&auto=webp&s=74b6828732c67b5abb9c2159ceb95d923422a14b",
     bannerUrl: "https://4kwallpapers.com/images/walls/thumbs/24237.jpg",
     cast: [
       {
@@ -762,8 +762,8 @@ export const mediaList: Media[] = [
     ageRating: "+16",
     genres: ["Drama", "Thriller"],
     rating: 4.9,
-    posterUrl: "https://4kwallpapers.com/images/walls/thumbs/24008.jpg",
-    bannerUrl: "https://4kwallpapers.com/images/walls/thumbs/24008.jpg",
+    posterUrl: "https://imgs.search.brave.com/e5DV2AV2J4CySdBJYQy4AIY0BvbnOoMEHCubtS7DC-g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZmlsbW1ha2Vyc2Fj/YWRlbXkuY29tL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDE5LzEw/L0FydC1hbmQtQ2lu/ZW1hdG9ncmFwaHkt/b2YtSEJPcy1DaGVy/bm9ieWwtRmlyZWZp/Z2h0ZXJzLVRydXRo/LUF0LUFsbC1Db3N0/cy1MaXF1aWRhdG9y/cy1FeHRlcmlvcnMt/TG93LUNvbnRyYXN0/LUNvb2tlLVMyLVBh/bmNocm8uanBn",
+    bannerUrl: "https://imgs.search.brave.com/xJtBSQQiQr8wcl9_pIHP3r2uczmwKzMC-X8MPOo5tEA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjEx/MjkwODAwNS9lcy9m/b3RvL2NoZXJub2J5/bC11a3JhaW5lLWEt/dmlldy1mcm9tLWNo/ZXJub2J5bC1hcy11/a3JhaW5pYW4tc29s/ZGllcnMtdmlzaXQt/dGhlLTMwLWtpbG9t/ZXRlci1leGNsdXNp/b24uanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPV9lajRQajVU/azFVTFhQQm9PZGRo/QVVQNkZWOTlDM2xW/Z0JseWJzOElRWms9",
     cast: [
       {
         id: "che001",
@@ -830,8 +830,8 @@ export const mediaList: Media[] = [
     ageRating: "+7",
     genres: ["Sci-Fi", "Drama"],
     rating: 4.8,
-    posterUrl: "https://4kwallpapers.com/images/walls/thumbs/23837.jpg",
-    bannerUrl: "https://4kwallpapers.com/images/walls/thumbs/23837.jpg",
+    posterUrl: "https://imgs.search.brave.com/sKCWeNoKyCE1ysrvQxEq9jQBRjnSvtyyPz7krSdH4PI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDkyNTU5/NzUuanBn",
+    bannerUrl: "https://imgs.search.brave.com/sFDSf_whit_bbeQqyQd3YVppMjBx3-IYuBr4MQowljw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuYWxwaGFjb2Rl/cnMuY29tLzUzMC90/aHVtYmJpZy01MzA1/MDUud2VicA",
     cast: [
       {
         id: "int001",
@@ -867,8 +867,8 @@ export const mediaList: Media[] = [
     ageRating: "+16",
     genres: ["Sci-Fi", "Thriller", "Drama"],
     rating: 4.5,
-    posterUrl: "https://4kwallpapers.com/images/walls/thumbs/23650.jpg",
-    bannerUrl: "https://4kwallpapers.com/images/walls/thumbs/23650.jpg",
+    posterUrl: "https://imgs.search.brave.com/GNif0Q5VnGK2tk0JaJ0j8RQUdvxs8-E1-T7C187Coe0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9waWNz/LmZpbG1hZmZpbml0/eS5jb20vYmxhY2tf/bWlycm9yLTg3MjQy/MTg5Mi1tbWVkLmpw/Zw",
+    bannerUrl: "https://imgs.search.brave.com/Kq2I1dG3DnJhQVilfSJx4Hqsuy2QHdTQxtDhFDYh5eg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9lc3Rh/dGljb3MtY2RuLnBy/ZW5zYWliZXJpY2Eu/ZXMvY2xpcC80NDcy/MWMzMC1iN2ZmLTQz/YTctYTFkNS0yNTM4/NGI0MWNmZGZfYWx0/YS1saWJyZS1hc3Bl/Y3QtcmF0aW9fZGVm/YXVsdF8wLmpwZw",
     cast: [
       {
         id: "bm001",
@@ -928,8 +928,8 @@ export const mediaList: Media[] = [
     ageRating: "+18",
     genres: ["Thriller", "Drama", "Comedy"],
     rating: 4.9,
-    posterUrl: "https://4kwallpapers.com/images/walls/thumbs/23043.png",
-    bannerUrl: "https://4kwallpapers.com/images/walls/thumbs/23043.png",
+    posterUrl: "https://imgs.search.brave.com/zWbw6JU58U0ay2mYrdTgWK_i0WRLK8jjMWHGKm66aEI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/ZGlzcGxhdGUuY29t/L2FydHdvcmsvMjcw/eDM4MC8yMDI2LTAx/LTAxLzY3MDI0NGJk/LWI1YWItNDQ4Mi1i/OThlLTZiZjc1ZDE2/NDI4NC5qcGc",
+    bannerUrl: "https://imgs.search.brave.com/c5I_rLM5jWoz8Xbi2CT8kU-j12UDrTghQ8veaZuSIhA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvbW9u/b2Nocm9tZS1wdWxw/LWZpY3Rpb24tdmlu/Y2VudC12ZWdhLWp1/bGVzLXdpbm5maWVs/ZC0ycm1kaWZkZzhq/NnZ1ZnpxLmpwZw",
     cast: [
       {
         id: "pf001",
@@ -972,8 +972,8 @@ export const mediaList: Media[] = [
     ageRating: "+18",
     genres: ["Drama", "Comedy"],
     rating: 4.8,
-    posterUrl: "https://4kwallpapers.com/images/walls/thumbs/22846.png",
-    bannerUrl: "https://4kwallpapers.com/images/walls/thumbs/22846.png",
+    posterUrl: "https://imgs.search.brave.com/t4gQavOtaf141kYguLAxA_EYd7E6TtqfSoLuuTBldhw/rs:fit:860:0:0:0/g:ce/aHR0cDovL3d3dy5p/bXBhd2FyZHMuY29t/L3R2L3Bvc3RlcnMv/c3VjY2Vzc2lvbi5q/cGc",
+    bannerUrl: "https://imgs.search.brave.com/Vzr6rp5inP5qXugh-uHGd_LwviXBJzPqDle-koHOudw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQva2Vu/ZGFsbC1hbmQtc2hp/di1zdWNjZXNzaW9u/LWp1YzVvbnpndDB4/ejVvN3QuanBn",
     cast: [
       {
         id: "suc001",
@@ -1047,8 +1047,8 @@ export const mediaList: Media[] = [
     ageRating: "+16",
     genres: ["Drama"],
     rating: 4.95,
-    posterUrl: "https://4kwallpapers.com/images/walls/thumbs/22564.png",
-    bannerUrl: "https://4kwallpapers.com/images/walls/thumbs/22564.png",
+    posterUrl: "https://imgs.search.brave.com/AW1SamQI_bSijDSCMeEUraiz_AEuMVi4fGDS164XxPU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMud2lraWEubm9j/b29raWUubmV0L2Rv/YmxhamUvaW1hZ2Vz/LzUvNTYvVGhlLVNo/YXdzaGFuay1SZWRl/bXB0aW9uLUxhdGlu/bzE5OTQuanBnL3Jl/dmlzaW9uL2xhdGVz/dC9zY2FsZS10by13/aWR0aC1kb3duLzI2/OD9jYj0yMDI0MDIy/NDIzMTEyNCZwYXRo/LXByZWZpeD1lcw",
+    bannerUrl: "https://imgs.search.brave.com/3sDS64uVVX8wX4PdIQweaaPaDPm0FPUADwaVw1aoLns/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL1Mv/YXBsdXMtbWVkaWEt/bGlicmFyeS1zZXJ2/aWNlLW1lZGlhLzM4/NGI0MTAxLWE3ZjAt/NDc5Mi1hOWU0LTZi/NWNiMGYyMmNhMi5f/X0NSMCwwLDk3MCw2/MDBfUFQwX1NYOTcw/X1YxX19fLmpwZw",
     cast: [
       {
         id: "tsr001",

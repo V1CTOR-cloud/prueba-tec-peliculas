@@ -31,7 +31,7 @@ export default function Hero() {
   if (!activeMedia) return null;
 
   return (
-    <section className="p-6">
+    <section>
       <div className="grid grid-cols-12 auto-rows-[150px] gap-4">
         <HeroCarousel
           className="col-span-12 lg:col-span-8 row-span-3"

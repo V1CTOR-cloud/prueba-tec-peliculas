@@ -1,16 +1,18 @@
 "use client";
 
 import { useRef } from "react";
+import type { Media } from "@/types";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Props {
   className?: string;
+  trendingMediaList: Media[]
 }
 
-export default function HeroTrending({ className }: Props) {
+export default function HeroTrending({ className, trendingMediaList }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const trending = [
+  /* const trending = [
     {
       title: "Batman",
       year: 2015,
@@ -73,7 +75,7 @@ export default function HeroTrending({ className }: Props) {
       year: 2022,
       image: "https://4kwallpapers.com/images/walls/thumbs/22564.png",
     },
-  ];
+  ]; */
 
   const scroll = (dir: "left" | "right") => {
     scrollRef.current?.scrollBy({
@@ -90,7 +92,7 @@ export default function HeroTrending({ className }: Props) {
 
       <div className="relative flex-1 min-h-0">
         {/* Controls */}
-        {trending.length > 5 && (
+        {trendingMediaList.length > 5 && (
           <>
             <button
               onClick={() => scroll("left")}
@@ -112,13 +114,13 @@ export default function HeroTrending({ className }: Props) {
           ref={scrollRef}
           className="flex flex-row gap-3 p-4 overflow-x-auto no-scrollbar h-full"
         >
-          {trending.map((item) => (
+          {trendingMediaList.map((item) => (
             <div
               key={item.title}
               className="relative group rounded-xl overflow-hidden cursor-pointer shrink-0 w-48 h-full"
             >
               <img
-                src={item.image}
+                src={item.posterUrl}
                 alt={item.title}
                 className="size-full object-cover transition-transform duration-300 group-hover:scale-105"
               />

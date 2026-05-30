@@ -1,22 +1,20 @@
 "use client";
+
+import { useState } from "react";
 import { useMedia } from "@/hooks/useMedia";
+import type { Media } from "@/types";
+
 import Button from "@/components/Button/Button";
 import { Ellipsis, Play } from "lucide-react";
-import { useState, useMemo } from "react";
 
 interface Props {
   className?: string;
+  items: Media[];
 }
 
-export default function HeroCarousel({ className }: Props) {
-  const { watchingList, mediaList, setActiveMedia } = useMedia();
+export default function HeroCarousel({ className, items }: Props) {
   const [current, setCurrent] = useState(0);
-
-  const items = useMemo(() => {
-    if (watchingList.length > 0) return watchingList.map((w) => w.media);
-    const topRated = [...mediaList].sort((a, b) => b.rating - a.rating)[0];
-    return topRated ? [topRated] : [];
-  }, [watchingList, mediaList]);
+  const { setActiveMedia } = useMedia();
 
   const goToSlide = (index: number) => {
     setCurrent(index);
@@ -26,7 +24,7 @@ export default function HeroCarousel({ className }: Props) {
   if (items.length === 0) return null;
 
   return (
-    <div className={`${className} relative rounded-2xl overflow-hidden`}>
+    <div className={`${className} cursor-pointer relative rounded-2xl overflow-hidden`}>
       <div
         className="flex h-full transition-transform duration-500 ease-out"
         style={{ transform: `translateX(-${current * 100}%)` }}

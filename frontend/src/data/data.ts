@@ -10,7 +10,7 @@ export const mediaList: Media[] = [
     year: 2015,
     director: "Sam Esmail",
     ageRating: "+16",
-    genres: ["Drama", "Thriller"],
+    genres: ["Drama", "Thriller", "Action"],
     rating: 4.8,
     posterUrl: "https://pics.filmaffinity.com/mr_robot-978107021-large.jpg",
     bannerUrl:
@@ -350,7 +350,7 @@ export const mediaList: Media[] = [
     id: "5dcacd4df6e0584c71a391b5520e90d9",
     type: "series",
     title: "Breaking Bad",
-    description: "",
+    description: "Walter White, an underpaid and unappreciated high school chemistry teacher, is diagnosed with terminal lung cancer. Desperate to secure the financial future of his family, wife Skyler and son Walt Jr.",
     year: 2002,
     director: "Vince Gilligan",
     ageRating: "+18",
@@ -456,7 +456,7 @@ export const mediaList: Media[] = [
             description:
               "With a dangerous captive in Jesse's basement, Walt faces a moral dilemma while scrambling to cover his tracks at home and keep their fledgling operation alive.",
             thumbnail:
-              "https://static.wikia.nocookie.net/breakingbad/images/4/4d/BB_102_S.jpg/revision/latest/scale-to-width-down/250?cb=20170418193851",
+              "https://static.wikia.nocookie.net/breakingbad/images/7/78/Walt-pilot.png/revision/latest?cb=20170514140346",
             duration: 45,
             season: 1,
             episode: 3,

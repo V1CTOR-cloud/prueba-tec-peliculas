@@ -9,7 +9,7 @@ import {
 interface MediaContextType {
   mediaList: Media[];
   watchingList: WatchingMedia[];
-  activeMedia: Media;
+  activeMedia: Media | null;
   setActiveMedia: (media: Media) => void;
   addToWatching: (media: Media) => void;
   removeFromWatching: (mediaId: string) => void;

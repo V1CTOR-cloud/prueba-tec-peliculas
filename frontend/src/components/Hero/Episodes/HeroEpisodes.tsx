@@ -1,16 +1,24 @@
-"use-client";
+"use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import type { Season } from "@/types";
 import EpisodeThumb from "./EpisodeThumb/EpisodeThumb";
 import { ChevronLeft, ChevronRight, ChevronsUpDown } from "lucide-react";
-import { mediaList } from "@/data/data";
 
 interface Props {
   className?: string;
+  season: Season[];
 }
 
-export default function HeroEpisodes({ className }: Props) {
+export default function HeroEpisodes({
+  className,
+  season,
+}: Props) {
+  const [selectedSeason, setSelectedSeason] = useState(0);
+
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  const currentSeason = season[selectedSeason];
 
   const scroll = (dir: "left" | "right") => {
     scrollRef.current?.scrollBy({
@@ -21,23 +29,21 @@ export default function HeroEpisodes({ className }: Props) {
 
   return (
     <div
-      className={`${className} min-h-0 flex flex-col rounded-2xl  text-white`}
+      className={`${className} min-h-0 flex flex-col rounded-2xl text-white`}
     >
-      <div className="relative z-10 py-2 px-4 flex justify-between items-center  rounded-t-2xl shrink-0">
+      <div className="relative z-10 py-2 px-4 flex justify-between items-center rounded-t-2xl shrink-0">
         <div className="flex gap-2 items-center">
           <h2 className="font-semibold text-xl">Episodes</h2>
+
           <div className="flex gap-1 items-center cursor-pointer">
-            <span>
-              - Season {mediaList[0].season[0].number}
-            </span>
+            <span>- Season {currentSeason.number}</span>
             <ChevronsUpDown size={20} />
           </div>
         </div>
       </div>
 
       <div className="relative flex-1 min-h-0">
-        {/* Controls */}
-        {mediaList[0].season[0]!.episodes!.length > 4 && (
+        {currentSeason.episodes?.length > 4 && (
           <>
             <button
               onClick={() => scroll("left")}
@@ -57,9 +63,9 @@ export default function HeroEpisodes({ className }: Props) {
 
         <div
           ref={scrollRef}
-          className="flex flex-row justify-between gap-3 p-4 overflow-x-auto no-scrollbar h-full"
+          className="flex flex-row gap-3 p-4 overflow-x-auto no-scrollbar h-full"
         >
-          {mediaList[0].season[0]!.episodes!.map((item) => (
+          {currentSeason.episodes?.map((item) => (
             <EpisodeThumb
               key={item.id}
               id={item.id}

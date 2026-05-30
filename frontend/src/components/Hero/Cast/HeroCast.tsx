@@ -1,12 +1,14 @@
+import type { CastMember } from "@/types";
+
 import Avatar from "@/components/Avatar/Avatar";
 import Button from "@/components/Button/Button";
-import { mediaList } from "@/data/data";
 
 interface Props {
   className?: string;
+  cast: CastMember[]
 }
 
-export default function HeroCast({ className }: Props) {
+export default function HeroCast({ className, cast }: Props) {
   
   return (
     <div className={`${className} flex flex-col bg-neutral-800 rounded-2xl text-white`}>
@@ -21,7 +23,7 @@ export default function HeroCast({ className }: Props) {
       </div>
 
       <div className="flex pt-2 flex-col gap-3 px-4 pb-4 min-h-0 overflow-y-auto no-scrollbar">
-        {mediaList[0].cast.map((actor) => (
+        {cast.map((actor) => (
           <Avatar
             key={actor.id}
             name={actor.name}

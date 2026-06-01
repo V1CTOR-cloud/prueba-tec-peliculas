@@ -25,7 +25,7 @@ export function useCatalog() {
   );
 
   const filterByType = useMemo(
-    () => (type: MediaType) => mediaList.filter((m) => m.type.includes(type)),
+    () => (type: MediaType) => mediaList.filter((m) => m.type === type),
     [mediaList],
   );
 

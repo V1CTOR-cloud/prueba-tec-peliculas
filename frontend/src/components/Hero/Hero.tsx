@@ -9,12 +9,11 @@ import HeroCarousel from "@/components/Hero/Carousel/Carousel";
 import HeroEpisodes from "@/components/Hero/Episodes/HeroEpisodes";
 import HeroCast from "@/components/Hero/Cast/HeroCast";
 import HeroDetails from "@/components/Hero/Details/HeroDetails";
-import HeroTrending from "@/components/Hero/Trending/HeroTrending";
 
 export default function Hero() {
   const { watchingList } = useMedia();
   const [activeMedia, setActiveMedia] = useState<Media | null>(null);
-  const { topRated, sortedByRating } = useCatalog();
+  const { topRated } = useCatalog();
 
   const carouselItems =
     watchingList.length > 0
@@ -55,7 +54,7 @@ export default function Hero() {
           cast={activeMedia.cast}
         />
 
-        <HeroTrending className="col-span-12 row-span-2" trendingMediaList={sortedByRating} />
+        
       </div>
     </section>
   );

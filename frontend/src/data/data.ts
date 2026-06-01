@@ -409,13 +409,6 @@ export const mediaList: Media[] = [
           "https://peliculas.lavanguardia.com/imagenes/w185/rF0Lb6SBhGSTvjRffmlKRSeI3jE.jpg",
       },
       {
-        id: "ed252a0379e948778979a4990bc3d3cb",
-        name: "Bob Odenkirk",
-        role: "Saul Goodman",
-        image:
-          "https://peliculas.lavanguardia.com/imagenes/w185/rF0Lb6SBhGSTvjRffmlKRSeI3jE.jpg",
-      },
-      {
         id: "ae2b5a28f5e8296417e0d2c4d3dcb4f1",
         name: "Steven Michael Quezada",
         role: "Steven Gomez",

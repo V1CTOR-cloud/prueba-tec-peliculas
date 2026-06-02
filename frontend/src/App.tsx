@@ -1,8 +1,9 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 import MainLayout from "@/Layout/MainLayout";
 import AuthLayout from "@/Layout/AuthLayout";
+import ProtectedRoute from "@/components/ProtectedRoute/ProtectedRoute";
 
 import Home from "@/pages/Home";
 import Movies from "@/pages/Movies";
@@ -10,21 +11,30 @@ import Series from "@/pages/Series";
 import Login from "@/pages/Login";
 import Register from "@/pages/Register";
 import Categories from "@/pages/Categories";
+import { useAuth } from "@/hooks/useAuth";
 
 function App() {
+  const { isAuthenticated } = useAuth();
+
   return (
     <Routes>
-      <Route element={<MainLayout />}>
-        <Route index path="/" element={<Home />} />
-        <Route path="/Categories" element={<Categories />} />
-        <Route path="/Movies" element={<Movies />} />
-        <Route path="/Series" element={<Series />} />
+      <Route path="/" element={<Navigate to={isAuthenticated ? "/home" : "/login"} replace />} />
+
+      <Route element={<ProtectedRoute />}>
+        <Route element={<MainLayout />}>
+          <Route path="/home" element={<Home />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/series" element={<Series />} />
+        </Route>
       </Route>
 
-      <Route element={<AuthLayout />}>
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Register" element={<Register />} />
+      <Route element={isAuthenticated ? <Navigate to="/home" replace /> : <AuthLayout />}>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Route>
+
+      <Route path="*" element={<Navigate to={isAuthenticated ? "/home" : "/login"} replace />} />
     </Routes>
   );
 }

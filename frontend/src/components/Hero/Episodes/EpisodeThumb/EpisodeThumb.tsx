@@ -1,5 +1,5 @@
 import Button from "@/components/Button/Button";
-import type { Episode } from "@/types";
+import type { Episode } from "@/types/mediaTypes";
 import { Play, Clapperboard } from "lucide-react";
 import { useState } from "react";
 

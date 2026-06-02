@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useMedia } from "@/hooks/useMedia";
-import type { Media } from "@/types";
+import type { Media } from "@/types/mediaTypes";
 
 import Button from "@/components/Button/Button";
 import { Ellipsis, Play } from "lucide-react";

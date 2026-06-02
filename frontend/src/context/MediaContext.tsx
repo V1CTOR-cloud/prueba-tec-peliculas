@@ -1,6 +1,6 @@
 "use client";
 import { createContext, useState, type ReactNode } from "react";
-import type { Media, WatchingMedia } from "@/types";
+import type { Media, WatchingMedia } from "@/types/mediaTypes";
 import {
   mediaList as initialMedia,
   watchingList as initialWatching,

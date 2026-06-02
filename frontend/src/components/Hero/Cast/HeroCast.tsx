@@ -1,4 +1,4 @@
-import type { CastMember } from "@/types";
+import type { CastMember } from "@/types/mediaTypes";
 
 import Avatar from "@/components/Avatar/Avatar";
 import Button from "@/components/Button/Button";

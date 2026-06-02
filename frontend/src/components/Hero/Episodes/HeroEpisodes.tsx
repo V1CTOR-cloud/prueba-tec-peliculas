@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import type { Season } from "@/types";
+import type { Season } from "@/types/mediaTypes";
 import EpisodeThumb from "./EpisodeThumb/EpisodeThumb";
 import { ChevronLeft, ChevronRight, ChevronsUpDown } from "lucide-react";
 

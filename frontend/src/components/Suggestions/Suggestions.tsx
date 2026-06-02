@@ -1,6 +1,6 @@
 import { useCatalog } from "@/hooks/useCatalog";
 import CatalogList from "@/components/CatalogList/CatalogList";
-import type { MediaType } from "@/types";
+import type { MediaType } from "@/types/mediaTypes";
 
 export default function Suggestions() {
   const { sortedByRating, sortedByYears, filterByType } = useCatalog();

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useMedia } from "@/hooks/useMedia";
 import { useCatalog } from "@/hooks/useCatalog";
-import type { Media } from "@/types";
+import type { Media } from "@/types/mediaTypes";
 
 import HeroCarousel from "@/components/Hero/Carousel/Carousel";
 import HeroEpisodes from "@/components/Hero/Episodes/HeroEpisodes";

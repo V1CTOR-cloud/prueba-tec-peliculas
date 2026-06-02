@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import type { Media } from "@/types";
+import type { Media } from "@/types/mediaTypes";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Poster from "../Poster/Poster";
 

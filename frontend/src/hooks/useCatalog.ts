@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useMedia } from "./useMedia";
-import type { Genre, MediaType } from "@/types";
+import type { Genre, MediaType } from "@/types/mediaTypes";
 
 export function useCatalog() {
   const { mediaList } = useMedia();

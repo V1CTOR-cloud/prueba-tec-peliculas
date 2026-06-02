@@ -1,6 +1,6 @@
 import Button from "@/components/Button/Button";
 import Chip from "@/components/Chip/Chip";
-import type { Media } from "@/types";
+import type { Media } from "@/types/mediaTypes";
 import { Star, Play, Bookmark, User } from "lucide-react";
 
 interface Props {

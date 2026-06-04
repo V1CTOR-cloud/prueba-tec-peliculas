@@ -5,7 +5,7 @@ export interface User {
   username: string;
   passw: string;
   name: string;
-  fullName?: string;
-  email?: string;
+  fullName: string;
+  email: string;
   list?: WatchingMedia[] | null;
 };

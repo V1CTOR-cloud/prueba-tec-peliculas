@@ -16,13 +16,13 @@ import {
 } from "lucide-react";
 
 export default function Navbar() {
-  const { logout } = useAuth();
+  const { user, logout } = useAuth();
   const navigate = useNavigate();
 
   const handleLogout = () => {
     logout();
-    navigate("/")
-  }
+    navigate("/");
+  };
 
   const navItems = [
     { label: "Home", icon: House, onClick: () => navigate("/") },
@@ -61,20 +61,21 @@ export default function Navbar() {
         </div>
       </div>
       <div className="flex items-center justify-center gap-3.5">
-        <DropdownMenu
-          trigger={
-            <Avatar
-              name="Víctor Martínez"
-              image="https://images.pexels.com/photos/36808916/pexels-photo-36808916.png"
-              fullInfo={{
-                name: "Víctor Martínez",
-                role: "SysAdmin",
-              }}
-            />
-          }
-          items={userActions}
-          className={"hidden lg:block"}
-        />
+        <div className="hidden md:flex">
+          <DropdownMenu
+            trigger={
+              <Avatar
+                name={user!.name}
+                image={user!.avatar}
+                fullInfo={{
+                  name: user!.fullName,
+                  role: user!.email,
+                }}
+              />
+            }
+            items={userActions}
+          />
+        </div>
 
         <DropdownMenu
           trigger={

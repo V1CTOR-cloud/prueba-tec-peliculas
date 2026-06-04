@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useNavigate } from "react-router-dom";
-import { LoginSchema, type LoginInput } from "@/schemas/login.schema";
 import { useAuth } from "@/hooks/useAuth";
+import { useNavigate } from "react-router-dom";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { LoginSchema, type LoginInput } from "@/schemas/login.schema";
 import Input from "@/components/Input/Input";
 import Button from "@/components/Button/Button";
 
@@ -27,7 +27,7 @@ export default function Login() {
       return;
     }
 
-    navigate("/dashboard");
+    navigate("/home");
   };
 
   return (
@@ -65,12 +65,7 @@ export default function Login() {
             </div>
 
             <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-1">
-                <input type="checkbox" name="rememberMe" id="rememberMe" />
-                <label htmlFor="rememberMe" className="leading-0 text-sm select-none text-neutral-400">
-                  Remember Me
-                </label>
-              </div>
+              
               <Button variant="outline" type="submit" disabled={isSubmitting}>
                 Sign in
               </Button>
@@ -89,10 +84,18 @@ export default function Login() {
 
         </div>
       </section>
-
-      {/* bento grid — sin cambios */}
       <section className="hidden flex-3 bg-neutral-800 2xl:grid grid-cols-7 grid-rows-6 gap-4 p-4">
-        {/* ... igual que antes */}
+        <div className="col-span-3 row-span-2 col-start-3 row-start-3 rounded-2xl flex items-center justify-center gap-2 bg-neutral-700">
+          <img src="/favicon.svg" alt="Bento, WatchNova Logo" />
+          <h1 className="text-5xl font-extrabold italic">WatchNova</h1>
+        </div>
+        <div className="col-span-2 row-span-2 col-start-1 row-start-1 rounded-2xl flex items-center justify-center bg-green-500"></div>
+        <div className="col-span-2 row-span-2 col-start-1 row-start-3 rounded-2xl flex items-center justify-center bg-pink-400"></div>
+        <div className="col-span-3 row-span-2 col-start-1 row-start-5 rounded-2xl flex items-center justify-center bg-amber-400"></div>
+        <div className="col-span-2 row-span-2 col-start-4 row-start-5 rounded-2xl flex items-center justify-center bg-blue-500"></div>
+        <div className="col-span-2 row-span-3 col-start-6 row-start-4 rounded-2xl flex items-center justify-center bg-emerald-400"></div>
+        <div className="col-span-2 row-span-3 col-start-6 row-start-1 rounded-2xl flex items-center justify-center bg-fuchsia-500"></div>
+        <div className="col-span-3 row-span-2 col-start-3 row-start-1 rounded-2xl flex items-center justify-center bg-purple-500"></div>
       </section>
     </div>
   );

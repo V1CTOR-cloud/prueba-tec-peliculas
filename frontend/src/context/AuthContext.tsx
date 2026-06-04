@@ -8,7 +8,7 @@ interface AuthContextType {
   isAuthenticated: boolean;
   login: (identifier: string, password: string) => boolean;
   logout: () => void;
-  register: (user: User) => boolean;
+  signup: (user: User) => boolean;
 }
 
 export const AuthContext = createContext<AuthContextType | null>(null);
@@ -38,18 +38,30 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     localStorage.removeItem(AUTH_KEY);
   };
 
-  const register = (newUser: User): boolean => {
+  const signup = (newUser: User): boolean => {
     const exists = userList.some((u) => u.username === newUser.username);
     if (exists) return false;
-    userList.push(newUser);
-    setUser(newUser);
-    localStorage.setItem(AUTH_KEY, JSON.stringify(newUser));
+
+    const generateUserName = (fullName: string) => {
+      return fullName
+    };
+
+    const userName = generateUserName(newUser.fullName); 
+    
+    const user = {
+      ...newUser,
+      userName,
+    };
+
+    userList.push(user);
+    setUser(user);
+    localStorage.setItem(AUTH_KEY, JSON.stringify(user));
     return true;
   };
 
   return (
     <AuthContext.Provider
-      value={{ user, isAuthenticated, login, logout, register }}
+      value={{ user, isAuthenticated, login, logout, signup }}
     >
       {children}
     </AuthContext.Provider>

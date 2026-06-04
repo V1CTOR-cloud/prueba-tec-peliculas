@@ -1094,7 +1094,6 @@ export const watchingList: WatchingMedia[] = [];
 
 export const userList: User[] = [
   {
-    name: "Víctor",
     fullName: "Víctor Martínez Zapata",
     email: "victorbg189@gmail.com",
     username: "vimaza",
@@ -1103,7 +1102,6 @@ export const userList: User[] = [
   {
     username: "elliot",
     passw: "mrrobot",
-    name: "Elliot",
     fullName: "Elliot Alderson",
     email: "elliot@allsafe.com",
   },

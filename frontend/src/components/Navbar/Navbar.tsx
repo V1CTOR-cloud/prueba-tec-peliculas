@@ -1,8 +1,11 @@
+import { useAuth } from "@/hooks/useAuth";
+import { useNavigate } from "react-router-dom";
+
 import Avatar from "@/components/Avatar/Avatar";
 import Button from "@/components/Button/Button";
 import NavbarItem from "./NavbarItem/NavbarItem";
 import DropdownMenu from "@/components/DropdownMenu/DropdownMenu";
-import { useNavigate } from "react-router-dom";
+
 import {
   House,
   Tv,
@@ -13,7 +16,13 @@ import {
 } from "lucide-react";
 
 export default function Navbar() {
+  const { logout } = useAuth();
   const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/")
+  }
 
   const navItems = [
     { label: "Home", icon: House, onClick: () => navigate("/") },
@@ -25,11 +34,11 @@ export default function Navbar() {
     { label: "Series", icon: Tv, onClick: () => navigate("/Series") },
     { label: "Movies", icon: Clapperboard, onClick: () => navigate("/Movies") },
     { type: "separator" } as const,
-    { label: "Log out", icon: LogOut, onClick: () => navigate("/") },
+    { label: "Log out", icon: LogOut, onClick: () => handleLogout() },
   ];
 
   const userActions = [
-    { label: "Log out", icon: LogOut, onClick: () => navigate("/") },
+    { label: "Log out", icon: LogOut, onClick: () => handleLogout() },
   ];
 
   return (
@@ -59,7 +68,7 @@ export default function Navbar() {
               image="https://images.pexels.com/photos/36808916/pexels-photo-36808916.png"
               fullInfo={{
                 name: "Víctor Martínez",
-                role: "SysAdmin"
+                role: "SysAdmin",
               }}
             />
           }

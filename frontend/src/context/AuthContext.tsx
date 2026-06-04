@@ -1,4 +1,3 @@
-"use client";
 
 import { createContext, useState, type ReactNode } from "react";
 import { userList } from "@/data/data";
@@ -7,7 +6,7 @@ import type { User } from "@/types/UserTypes";
 interface AuthContextType {
   user: User | null;
   isAuthenticated: boolean;
-  login: (username: string, password: string) => boolean;
+  login: (identifier: string, password: string) => boolean;
   logout: () => void;
   register: (user: User) => boolean;
 }
@@ -24,9 +23,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const isAuthenticated = user !== null;
 
-  const login = (username: string, password: string): boolean => {
+  const login = (identifier: string, password: string): boolean => {
     const found = userList.find(
-      (u) => u.username === username && u.passw === password,
+      (u) => (u.username === identifier || u.email === identifier) && u.passw === password,
     );
     if (!found) return false;
     setUser(found);

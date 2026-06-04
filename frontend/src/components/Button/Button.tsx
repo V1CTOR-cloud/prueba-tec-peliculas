@@ -10,7 +10,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary text-white hover:bg-primary/90 rounded-md font-medium",
         secondary: "bg-gray-100 text-black hover:bg-gray-200 rounded-md font-medium",
-        outline: "border border-neutral-500 hover:bg-neutral-900 rounded-md font-medium",
+        outline: "border border-neutral-500 hover:bg-neutral-900 rounded-md font-medium hover:bg-neutral-800 transition-colors",
         ghost: "!bg-transparent",
         destructive: "bg-red-500 text-white hover:bg-red-600 rounded-md font-medium",
         navbar: "gap-1.5 rounded-lg cursor-pointer text-muted hover:bg-black/60",

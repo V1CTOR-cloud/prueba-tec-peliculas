@@ -18,23 +18,37 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Navigate to={isAuthenticated ? "/home" : "/login"} replace />} />
+      <Route
+        path="/"
+        element={<Navigate to={isAuthenticated ? "/home" : "/login"} replace />}
+      />
 
-      <Route element={<ProtectedRoute />}>
-        <Route element={<MainLayout />}>
-          <Route path="/home" element={<Home />} />
-          <Route path="/categories" element={<Categories />} />
-          <Route path="/movies" element={<Movies />} />
-          <Route path="/series" element={<Series />} />
-        </Route>
+      <Route
+        element={
+          <ProtectedRoute>
+            <MainLayout />
+          </ProtectedRoute>
+        }
+      >
+        <Route path="/home" element={<Home />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/series" element={<Series />} />
       </Route>
 
-      <Route element={isAuthenticated ? <Navigate to="/home" replace /> : <AuthLayout />}>
+      <Route
+        element={
+          isAuthenticated ? <Navigate to="/home" replace /> : <AuthLayout />
+        }
+      >
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Route>
 
-      <Route path="*" element={<Navigate to={isAuthenticated ? "/home" : "/login"} replace />} />
+      <Route
+        path="*"
+        element={<Navigate to={isAuthenticated ? "/home" : "/login"} replace />}
+      />
     </Routes>
   );
 }

@@ -1,3 +1,4 @@
+import AuthGrid from "@/components/AuthGrid/AuthGrid";
 import Button from "@/components/Button/Button";
 import Input from "@/components/Input/Input";
 import { useAuth } from "@/hooks/useAuth";
@@ -47,7 +48,7 @@ export default function Register() {
               />
             </div>
             <div className="flex flex-col gap-2 justify-between items-center">
-              <h1 className="text-4xl font-semibold">Create your account</h1>
+              <h1 className="text-4xl font-semibold">Create your account ✌️</h1>
               <p className="text-neutral-400">
                 Please enter your details to sign up
               </p>
@@ -109,9 +110,7 @@ export default function Register() {
           </form>
         </div>
       </section>
-      <section className="hidden flex-3 bg-neutral-800 2xl:grid grid-cols-7 grid-rows-6 gap-4 p-4">
-        
-      </section>
+      <AuthGrid />
     </div>
   );
 }

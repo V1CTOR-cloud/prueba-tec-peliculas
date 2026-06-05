@@ -7,7 +7,7 @@ export default function ProfileTabGeneral() {
 
   return (
     <>
-      <section id="watchlist" className="flex gap-8">
+      <section id="watchlist" className="flex gap-8 flex-col lg:flex-row">
         <div className="flex-1">
           <h3 className="text-xl">Watch List</h3>
           <p className="text-neutral-400">Your saved movies and series.</p>

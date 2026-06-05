@@ -46,7 +46,7 @@ export default function Profile() {
   }, []);
 
   return (
-    <div className="min-h-full px-32 pt-2 flex flex-col gap-6">
+    <div className="min-h-full sm:px-5 md:px-32 pt-2 flex flex-col gap-6">
       
       <div className="sticky bg-neutral-900 top-0 z-10 pt-2">
         <Tabs
@@ -56,11 +56,11 @@ export default function Profile() {
         />
       </div>
 
-      <div className="flex flex-col gap-24">
+      <div className="flex flex-col gap-10 lg:gap-24">
         {tabItems.map((item) => (
-            <>
+            <div key={item.id} className="flex flex-col gap-10 lg:gap-24">
               {item.tab}
-            </>
+            </div>
         ))}
         <Separator />
         <div className="flex justify-end items-center">

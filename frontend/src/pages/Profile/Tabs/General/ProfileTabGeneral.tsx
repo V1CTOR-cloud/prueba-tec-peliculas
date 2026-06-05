@@ -5,7 +5,7 @@ import { AtSign, Mail, User } from "lucide-react";
 export default function ProfileTabGeneral() {
   return (
     <>
-      <section id="general" className="flex gap-8">
+      <section id="general" className="flex flex-col lg:flex-row gap-8">
         <div className="flex-1">
           <h3 className="text-xl">General Information</h3>
           <p className="text-neutral-400">Manage your personal information.</p>

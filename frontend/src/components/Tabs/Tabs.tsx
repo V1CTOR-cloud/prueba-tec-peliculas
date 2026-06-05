@@ -20,7 +20,7 @@ export default function Tabs({
   className,
 }: TabsProps) {
   return (
-    <div className={cn("flex border-b border-neutral-500", className)}>
+    <div className={cn("flex justify-between lg:justify-start border-b border-neutral-500", className)}>
       {items.map((item) => {
         const isActive = activeTab === item.id;
         return (

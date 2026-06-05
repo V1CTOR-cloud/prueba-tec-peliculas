@@ -10,7 +10,7 @@ interface Props {
   className?: string;
   fullInfo?: {
     name: string;
-    role: string;
+    role?: string;
   };
 }
 

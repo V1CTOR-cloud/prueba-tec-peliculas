@@ -65,7 +65,7 @@ export default function Navbar() {
           <DropdownMenu
             trigger={
               <Avatar
-                name={user!.name}
+                name={user!.fullName}
                 image={user!.avatar}
                 fullInfo={{
                   name: user!.fullName,

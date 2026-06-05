@@ -38,7 +38,7 @@ export default function Register() {
   return (
     <div className="min-h-screen flex text-[#FAFAFA]">
       <section className="flex-1 flex items-center justify-center">
-        <div className="flex flex-col gap-4 lg:min-w-96">
+        <div className="flex flex-col gap-4 lg:min-w-96 ">
           <div className="flex flex-col pb-4">
             <div className="mx-auto rounded p-2.5 grid place-content-center w-fit">
               <img
@@ -48,7 +48,7 @@ export default function Register() {
               />
             </div>
             <div className="flex flex-col gap-2 justify-between items-center">
-              <h1 className="text-4xl font-semibold">Create your account ✌️</h1>
+              <h1 className="text-3xl font-semibold">Create Account ✌️</h1>
               <p className="text-neutral-400">
                 Please enter your details to sign up
               </p>

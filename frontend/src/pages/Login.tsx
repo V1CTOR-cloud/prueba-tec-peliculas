@@ -44,7 +44,7 @@ export default function Login() {
               />
             </div>
             <div className="flex flex-col gap-2 justify-between items-center">
-              <h1 className="text-4xl font-semibold">Welcome Back 👋</h1>
+              <h1 className="text-3xl font-semibold">Welcome Back 👋</h1>
               <p className="text-neutral-400">
                 Please enter your details to log in
               </p>
@@ -74,7 +74,7 @@ export default function Login() {
             </div>
 
             <div className="flex flex-col gap-4">
-              <Button variant="outline" type="submit" disabled={isSubmitting}>
+              <Button variant="secondary" type="submit" disabled={isSubmitting}>
                 Sign in
               </Button>
               <div className="flex items-center justify-center gap-2.5">

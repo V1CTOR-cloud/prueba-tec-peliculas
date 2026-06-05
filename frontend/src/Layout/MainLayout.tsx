@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 export default function MainLayout() {
   return (
-    <div className="bg-primary">
+    <div className="bg-primary text-[#FAFAFA]">
       <Navbar />
       <main  className="p-6">
         <Outlet />

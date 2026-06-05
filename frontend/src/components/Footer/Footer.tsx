@@ -1,4 +1,5 @@
 import { BriefcaseBusiness } from "lucide-react";
+import Separator from "@/components/Separator/Separator";
 
 export default function Footer() {
   return (
@@ -15,7 +16,7 @@ export default function Footer() {
           <a href="/Movies">Movies</a>
         </div>
       </div>
-      <hr className="border-0 h-px bg-neutral-500" />
+      <Separator />
       <div className="flex items-center justify-between">
         <a
           href="https://www.linkedin.com/in/v%C3%ADctor-mart%C3%ADnez-zapata/"

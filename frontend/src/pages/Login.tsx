@@ -6,6 +6,7 @@ import { LoginSchema, type LoginInput } from "@/schemas/login.schema";
 import Input from "@/components/Input/Input";
 import Button from "@/components/Button/Button";
 import AuthGrid from "@/components/AuthGrid/AuthGrid";
+import Separator from "@/components/Separator/Separator";
 
 export default function Login() {
   const { login } = useAuth();
@@ -78,13 +79,13 @@ export default function Login() {
                 Sign in
               </Button>
               <div className="flex items-center justify-center gap-2.5">
-                <hr className="border-0 h-px bg-neutral-500 w-full" />
+                <Separator />
                 <img
                   src="/favicon.svg"
                   alt="WatchNova Logo"
                   className="size-4 select-none"
                 />
-                <hr className="border-0 h-px bg-neutral-500 w-full" />
+                <Separator />
               </div>
             </div>
 

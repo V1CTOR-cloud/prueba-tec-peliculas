@@ -4,15 +4,16 @@ import { cn } from "@/lib/utils"
 import { type LucideIcon } from "lucide-react"
 
 const buttonVariants = cva(
-  "inline-flex gap-2.5 items-center justify-center transition-colors focus:outline-none disabled:opacity-50 disabled:pointer-events-none cursor-pointer",
+  "inline-flex gap-2.5 items-center justify-center transition-colors rounded-md focus:outline-none disabled:opacity-50 disabled:pointer-events-none cursor-pointer",
   {
     variants: {
       variant: {
-        default: "bg-primary text-white hover:bg-primary/90 rounded-md font-medium",
-        secondary: "bg-gray-100 text-black hover:bg-gray-200 rounded-md font-medium",
-        outline: "border border-neutral-500 hover:bg-neutral-900 rounded-md font-medium hover:bg-neutral-800 transition-colors",
+        default: "bg-primary text-white hover:bg-primary/90 font-medium",
+        secondary: "bg-gray-100 text-black hover:bg-gray-200 font-medium",
+        outline: "border border-neutral-500 hover:bg-neutral-900 font-medium hover:bg-neutral-800",
         ghost: "!bg-transparent",
-        destructive: "bg-red-500 text-white hover:bg-red-600 rounded-md font-medium",
+        destructive: "bg-red-500 text-white hover:bg-red-600 font-medium",
+        outline_destructive: "bg-transparent ring ring-red-400 !text-red-400 hover:bg-red-600/10",
         navbar: "gap-1.5 rounded-lg cursor-pointer text-muted hover:bg-black/60",
         "navbar-active": "gap-1.5 rounded-lg cursor-pointer bg-purple-400",
         glass: "bg-black/60 backdrop-blur-md border border-white/10 shadow-lg"

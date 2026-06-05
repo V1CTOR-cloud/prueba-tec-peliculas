@@ -1,6 +1,7 @@
 import AuthGrid from "@/components/AuthGrid/AuthGrid";
 import Button from "@/components/Button/Button";
 import Input from "@/components/Input/Input";
+import Separator from "@/components/Separator/Separator";
 import { useAuth } from "@/hooks/useAuth";
 import { type SignupInput, SignupSchema } from "@/schemas/signup.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -89,13 +90,13 @@ export default function Register() {
                 Sign up
               </Button>
               <div className="flex items-center justify-center gap-2.5">
-                <hr className="border-0 h-px bg-neutral-500 w-full" />
+                <Separator />
                 <img
                   src="/favicon.svg"
                   alt="WatchNova Logo"
                   className="size-4 select-none"
                 />
-                <hr className="border-0 h-px bg-neutral-500 w-full" />
+                <Separator />
               </div>
             </div>
 

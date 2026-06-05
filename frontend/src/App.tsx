@@ -12,6 +12,7 @@ import Login from "@/pages/Login";
 import Register from "@/pages/Register";
 import Categories from "@/pages/Categories";
 import { useAuth } from "@/hooks/useAuth";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
   const { isAuthenticated } = useAuth();
@@ -34,6 +35,7 @@ function App() {
         <Route path="/categories" element={<Categories />} />
         <Route path="/movies" element={<Movies />} />
         <Route path="/series" element={<Series />} />
+        <Route path="user/:user" element={<Profile />} />
       </Route>
 
       <Route

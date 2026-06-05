@@ -13,6 +13,7 @@ import {
   Menu,
   LogOut,
   LayoutGrid,
+  Settings,
 } from "lucide-react";
 
 export default function Navbar() {
@@ -22,6 +23,14 @@ export default function Navbar() {
   const handleLogout = () => {
     logout();
     navigate("/");
+  };
+
+  const handleProfile = () => {
+    if (!user) return;
+
+    navigate(`/user/${user.fullName}`, {
+      state: user,
+    });
   };
 
   const navItems = [
@@ -39,6 +48,7 @@ export default function Navbar() {
 
   const userActions = [
     { label: "Log out", icon: LogOut, onClick: () => handleLogout() },
+    { label: "Profile", icon: Settings, onClick: () => handleProfile() },
   ];
 
   return (
